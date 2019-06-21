@@ -1,11 +1,7 @@
 
-[![Build Status][build-shield]]()
-[![Contributors][contributors-shield]]()
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/tanveeralims]
-
 <p align="center">
   <h3 align="center">react-list-detail-app Part-2</h3>
-
+</p>
   <p align="center">
     ReactJS application which contains a list and a detail view of the charcater from SWAPI.
     <br />
@@ -23,7 +19,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Demo](https://github.com/TanveerAliS/react-list-details-app-part-2/blob/master/gifs/react-list-details-app.gif)
 
 I have used [create-react-app](https://github.com/facebook/create-react-app) (react hooks) and [swapi](https://swapi.co/documentation) to develop this application. The purpose of the application is to correctly render the data from API as a list and also the details about the individual list item.
 
@@ -57,14 +53,15 @@ npm install npm@latest -g
 
 1. Clone the repo
 ```sh
-git clone https:://github.com/your_username_/Project-Name.git
+git clone https://github.com/TanveerAliS/react-list-details-app-part-2.git
 ```
-3. Install NPM packages
+2. Go to dir and Install NPM packages then start
 ```sh
+cd react-list-details-app-part-2
 npm install
+npm start
 ```
 ## Usage
-
 
 ```
 ├── .gitignore                      <- Files that should be ignored by git. 
@@ -110,17 +107,27 @@ In this application, we fetching the data from swapi (https://swapi.co/api/peopl
 
 In HomeView, user can able to search the specific character from the list and display on page and also user can toggle the sorting by name.
 
+<p align="center">
+  <img width="460" height="300" src="https://github.com/TanveerAliS/react-list-details-app-part-2/blob/master/gifs/searchAndSort.gif">
+</p>
 Once the user clicks on of character, it will fetch all data related to the character and also fetching all films in which he appeared for which we make use of Axios and promise all to fetch different endpoint. Once the promise is resolved will render the detailsView.
 
+<p align="center">
+  <img width="460" height="300" src="https://github.com/TanveerAliS/react-list-details-app-part-2/blob/master/gifs/listToDetails.gif" >
+</p>
 In detailsView, I have provided some simple animation for image and showing the films in which character appeared.
+<p align="center">
+  <img width="360" height="100" src="https://github.com/TanveerAliS/react-list-details-app-part-2/blob/master/gifs/animations.gif" >
 
+  <img width="360" height="100" src="https://github.com/TanveerAliS/react-list-details-app-part-2/blob/master/gifs/animations2.gif" >
+</p>
 User can be able to come back from detailsView to HomeView(list page) by clicking back CTA.
 
 It will render loading component while application fetching data from API.
 
 This application is fully accessible with tabs and screen readers.
 
-##ToDo
+## ToDo
 
 Do to low bandwidth and work in my currrent organization I coudnt able to cover testing for this application. I will work on this once I'm back from hometown.
 
