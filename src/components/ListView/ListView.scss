@@ -1,0 +1,22 @@
+.listView {
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 2em;
+    width: 20em;
+    margin: 0 auto;
+  
+    & > li {
+      border-bottom: 1px solid #ffe82f;
+      padding-top: 1em;
+      padding-bottom: 1em;
+  
+      &:first-child {
+        padding-top: 0;
+      }
+  
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }

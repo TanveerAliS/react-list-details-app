@@ -1,0 +1,87 @@
+$YELLOW: #ffe82f;
+
+.Filters{
+    display: flex;
+    justify-content: space-between;
+    width: 24rem;
+    text-align: center;
+    margin: 0 auto;
+
+    .search-block{
+        width: 90%;
+        height:50px;
+        background: black;
+        overflow:hidden;
+        position:relative;
+        box-shadow: 8px 4px 40px -19px $YELLOW;
+    
+        input[type="search"]{
+            height:100%;
+            width:100%;
+            border:0px;
+            background:transparent;
+            position:relative;
+            -webkit-appearance:none;
+            padding:0px 20px 0px 50px;
+            font-size:18px;
+            color:#2f3542;
+            z-index:2;
+    
+            &::placeholder {
+                color: black;
+                opacity: 1;
+            }
+    
+            &:-ms-input-placeholder { 
+                color: black;
+            }
+
+            &:focus {
+                color: black;
+            }
+        }
+
+        input[type="search"]:focus + .icon{
+            transform:translate(50%,-50%) scale(40) rotate(180deg);
+            color: white;
+        }
+
+        .icon {
+            position:absolute;
+            pointer-events:none;
+            left:14px;
+            top:50%;
+            transform:translateY(-50%);
+            transition-duration:.8s;
+            z-index:0;
+        
+            &::before{
+                margin-top:-4px;
+                display:block;
+                content:'';
+                height:20px;
+                width:20px;
+                border-radius:20px;
+                background: $YELLOW;
+            }
+
+            &::after{
+                position:absolute;
+                bottom:-8px;
+                right:5px;
+                display:block;
+                content:'';
+                height:15px;
+                width:4px;
+                border-radius:20px;
+                transform:rotate(-45deg);
+                transform-origin:center top;
+                background: $YELLOW;
+            }
+        }
+    }
+
+    .sortWrapper{
+        padding-top: 3px;
+    }
+}

@@ -1,0 +1,156 @@
+// *******  VARS  *******
+//Components
+$btn-size: 1.5em;
+
+$base-bg-color: black;
+$base-font-color: white;
+
+$star-wars-yellow: #ffe82f;
+$secondary-text-color: gray;
+$link-color: $base-font-color;
+$icon-color: $base-font-color;
+$heading-1: 1.75em;
+$heading-2: 1.5em;
+
+// -------------------------------------------------
+
+
+body {
+    background: $base-bg-color url("http://cssanimation.rocks/demo/starwars/images/bg.jpg");
+    color: $base-font-color;
+    font-size: 1.2rem;
+    margin: 5rem auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 5rem auto;
+}
+
+// ******* FLEX LAYOUT *******
+.flex-main-content {
+  flex: 1;
+}
+
+// ******* FLEX COLUMN *******
+@mixin flex-column {
+  display: flex;
+  flex-flow: column;
+}
+.flex-column {
+  @include flex-column;
+}
+
+// ******* FLEX ROW *******
+@mixin flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+
+  &.flex-centered {
+    justify-content: center;
+  }
+  &.flex-vertical-middle {
+    align-items: center;
+  }
+}
+.flex-row {
+  @include flex-row;
+}
+
+// ******* BUTTONS *******
+.icon-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: $btn-size;
+
+  .icons {
+    font-size: $btn-size;
+    color: $icon-color;
+  }
+}
+
+// ******* HELPERS *******
+
+.helper-centered {
+  text-align: center;
+}
+.helper-full-width {
+  width: 100%;
+}
+
+// ******* THEME *******
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:link,
+  &:visited,
+  &:active {
+    color: $link-color;
+  }
+}
+
+h1 {
+  color: $star-wars-yellow;
+  font-size: $heading-1;
+}
+
+h2 {
+  font-size: $heading-2;
+  font-weight: 300;
+
+  &.list-item-header {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    display: flex;
+  }
+
+  svg {
+    margin-right: 1em;
+  }
+}
+
+.logo {
+  width: 10em;
+  max-width: 80%;
+  height: auto;
+}
+
+.spinner {
+    margin: 100px auto 0;
+    text-align: center;
+
+    > div {
+        width: 25px;
+        height: 25px;
+        background-color: white;
+    
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+  
+    .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+    
+    .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+}
+  
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% { 
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
