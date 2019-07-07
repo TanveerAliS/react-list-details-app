@@ -134,5 +134,3 @@ Do to low bandwidth and work in my currrent organization I coudnt able to cover 
 ## Contact
 
 Your Name - [@TanveerAli_S](https://twitter.com/TanveerAli_S) - tanveeralims@gmail.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
